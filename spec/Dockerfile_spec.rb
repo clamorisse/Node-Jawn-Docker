@@ -20,7 +20,7 @@ describe "Dockerfile" do
     expect(os_version).to include("Ubuntu 14")
   end
 
-  ['nodejs', 'nodejs-legacy', 'npm'].each do |package|
+  ['nodejs', 'npm'].each do |package|
 	
     it "installs package #{package}" do 
       expect(package("#{package}")).to be_installed
