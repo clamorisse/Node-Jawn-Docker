@@ -48,5 +48,11 @@ docker run --rm -ti \
 ```
 then run test by replacing ```bundler install``` with ```rspec```.
 
+For more information on how to use rspec and serverspec to run test on a dockerfile check this other works and repositories:
+https://robots.thoughtbot.com/tdd-your-dockerfiles-with-rspec-and-serverspec
+https://github.com/swipely/docker-api
+http://serverspec.org/
+
+
 
 
