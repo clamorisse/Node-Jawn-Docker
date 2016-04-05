@@ -11,4 +11,3 @@ RUN mkdir /app/
 WORKDIR /app/
 
 CMD ["/usr/bin/nodejs"]
-
