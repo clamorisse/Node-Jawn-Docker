@@ -12,27 +12,23 @@ describe "Dockerfile" do
     set :docker_image, image.id
   end
 
-   it "installs the right version of Ubuntu" do
+  it "installs the right version of Ubuntu" do
     expect(os_version).to include("Ubuntu 14")
   end
 
   ['nodejs', 'npm'].each do |package|
-	
     it "installs package #{package}" do 
       expect(package("#{package}")).to be_installed
     end
   end
   
   describe 'Application folders configured' do
-
     describe file('/app') do
       it { should be_directory }
     end
-  
     describe command('pwd') do
-      its(:stdout) { should match /app/ }
+      its(:stdout) { should match(/app/) }
     end		     
-  
  end 		   
 
   def os_version
