@@ -60,6 +60,9 @@ http://serverspec.org/
 Once in a while, there is a need to maintain the virtual machine clean of intermediated images and exited containers
 in order to have docker container running properly.
 To delete intermidiate images:
+
 ```docker rmi $(docker images | grep "^<none>" | awk '{print$3}')```
+
 and to delete exited containers:
+
 ```docker rm $(docker ps --all -q -f status=exited)```
