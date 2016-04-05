@@ -4,13 +4,11 @@ MAINTAINER Berenice Venegas <bvcotero@gmail.com>
 
 RUN apt-get update
  
-RUN apt-get install
-	nodejs \
-	npm
+RUN apt-get install -y nodejs npm
 
 RUN mkdir /app/
 
 WORKDIR /app/
 
-CMD ['node']
+CMD ["/usr/bin/nodejs"]
 
