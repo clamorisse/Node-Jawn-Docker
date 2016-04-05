@@ -4,7 +4,7 @@ A Node.Js docker container with the purpose to be used by contributers to the Ja
 
 ## The container
 
-The container OS is Ubuntu, and installs nodejs and npm. The working directory is /app
+The container uses Ubuntu, and installs nodejs and npm. The working directory is /app
 In addition, this container comes with an rspec test to check the container builds properly and as expected (see below).
 
 ### How to run it?
