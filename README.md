@@ -32,7 +32,8 @@ And to run your application:
 This repository contains a file spec/Dockerfile_spec.rb that test that the image create functions as expected.
 This test runs using a container.
 After cloning this repository, install the necessary gemsto run rspec and serverspec:
-```docker run --rm -ti \
+```
+docker run --rm -ti \
        --net host  \
        --name ruby \
        -e BUNDLE_PATH=/usr/src/app/rubies \
@@ -43,7 +44,8 @@ After cloning this repository, install the necessary gemsto run rspec and server
        -v "$PWD":/usr/src/app \
        -e PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/src/app:/usr/src/app/rubies \
        -w /usr/src/app ruby:2.1  \
-       bundler install```
+       bundler install
+```
 then run test by replacing ```bundler install``` with ```rspec```.
 
 
