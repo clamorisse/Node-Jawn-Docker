@@ -24,7 +24,7 @@ To work in the nodejs console:
 
 And to run your application:
 
-```docker run --rm -it -v "/Users/bvcotero/devopsing/dockerfiles/Node-Jawn-Docker/:/app/" name-of-the-image/your-node-application```
+```docker run --rm -it -v "/Users/bvcotero/devopsing/dockerfiles/Node-Jawn-Docker/:/app/" name-of-the-image/your-node-application file-with-application```
 
 
 # To test Dockerfile with rspec
