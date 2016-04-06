@@ -16,15 +16,15 @@ First clone this repository, then you have to build the image (make sure you are
 Once the containers image has been build, you can run it. The different commands below to run it will map your application directory into the container and anything you create or change will be automatically updated into your local computer.
 To work inside the container in bash:
 
-```docker run --rm -it -v "/Users/bvcotero/devopsing/dockerfiles/Node-Jawn-Docker/:/app/" bvcotero/node-jawn bash```
+```docker run --rm -it -v "/Users/bvcotero/devopsing/dockerfiles/Node-Jawn-Docker/:/app/" name-of-the-image/your-node-application bash```
 
 To work in the nodejs console:
 
-```docker run --rm -it -v "/Users/bvcotero/devopsing/dockerfiles/Node-Jawn-Docker/:/app/" bvcotero/node-jawn nodejs```
+```docker run --rm -it -v "/Users/bvcotero/devopsing/dockerfiles/Node-Jawn-Docker/:/app/" name-of-the-image/your-node-application nodejs```
 
 And to run your application:
 
-```docker run --rm -it -v "/Users/bvcotero/devopsing/dockerfiles/Node-Jawn-Docker/:/app/" bvcotero/node-jawn your-application```
+```docker run --rm -it -v "/Users/bvcotero/devopsing/dockerfiles/Node-Jawn-Docker/:/app/" name-of-the-image/your-node-application```
 
 
 # To test Dockerfile with rspec
