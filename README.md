@@ -29,9 +29,9 @@ And to run your application:
 
 # To test Dockerfile with rspec
 
-This repository contains a file spec/Dockerfile_spec.rb that test that the image create functions as expected.
-This test runs using a container.
-After cloning this repository, install the necessary gemsto run rspec and serverspec:
+This repository contains a file spec/Dockerfile_spec.rb that test the image.
+This test runs using a container as well.
+After cloning this repository, install the necessary gems to run rspec and serverspec:
 ```
 docker run --rm -ti \
        --net host  \
