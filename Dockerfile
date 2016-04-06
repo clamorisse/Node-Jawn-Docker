@@ -4,7 +4,7 @@ MAINTAINER Berenice Venegas <bvcotero@gmail.com>
 
 RUN apt-get update
  
-RUN apt-get install -y nodejs npm
+RUN apt-get install -y nodejs npm nodejs-legacy git
 
 RUN mkdir /app/
 
