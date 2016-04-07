@@ -15,21 +15,37 @@ describe "Dockerfile" do
     expect(os_version).to include("Ubuntu 14")
   end
 
-  ['nodejs', 'npm'].each do |package|
+  ['nodejs', 'npm', 'nodejs-legacy', 'curl'].each do |package|
     it "should install package #{package}" do 
       expect(package("#{package}")).to be_installed
     end
   end
   
-  describe 'Application folders configured' do
+  describe 'Application folders and files configured' do
     describe file('/app') do
       it { should be_directory }
     end
     describe command('pwd') do
       its(:stdout) { should match(/app/) }
-    end		     
+    end
+    describe file('/app/package.json') do
+      it { should exist }
+    end      
+    describe file('/app/package.json') do
+      it { should be_file }
+    end
+    describe file('/app/node_modules') do
+      it { should exist }
+    end
+    describe file('/app/node_modules') do
+      it { should be_directory }
+    end      
   end 		   
-  
+
+  describe user ('jawn') do
+    it { should exist }
+  end
+
   it 'should run with correct version of nodejs' do
     expect(node_ver).to match("v0.10.25") 
   end

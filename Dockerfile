@@ -22,4 +22,4 @@ RUN npm install
 # Login as user jawn
 USER jawn
 
-CMD ["nodejs"]
+CMD ["/usr/bin/nodejs"]
