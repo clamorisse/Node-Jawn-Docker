@@ -8,8 +8,10 @@ RUN add-apt-repository -y ppa:chris-lea/node.js
 RUN apt-get update -y
 RUN apt-get install -y nodejs
 
-RUN mkdir /app/
 
+RUN mkdir /app/
 WORKDIR /app/
+COPY package.json /app/
+RUN npm install
 
 CMD ["/usr/bin/nodejs"]
