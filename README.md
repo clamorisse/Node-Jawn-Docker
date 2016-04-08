@@ -31,20 +31,18 @@ _Note:_ This example creates an image called `node-jawn` and calls the applicati
 ### Run the Image
 
 Once the container's image has been built, you can run it. The different commands below to run it will map your application directory into the container and anything you create or change will be automatically updated into your local computer.
-To work inside the container in bash:
 
 *Note:* these examples assume that you're in the directory where your code lives (ie. your local copy of the jawn code). If you want to explicitly tell docker where to mount the code, replace `$(pwd)` with the path to your code.
 
+To run jawn application:
+
+```docker run --rm node-jawn/jawn npm test```
+
+To work in the nodejs bash, mapping your current directory:
+
 ```docker run --rm -it -v "$(pwd):/app/" node-jawn/jawn bash```
 
-To work in the nodejs console:
-
-```docker run --rm -it -v "$(pwd):/app/" node-jawn/jawn nodejs```
-
-And to run your application:
-
-```docker run --rm -it -v "$(pwd):/app/" node-jawn/jawn file-with-application```
-
+*Note:* Using this option you will remove the modules with the dependances that the container created, you could maintain those modules if you remove ```-v "$(pwd):/app/" ``` and do not map your directory. Also, if mapping make sure you do not map the modules, create modules by running npm install inside the container.
 
 # To test Dockerfile with rspec
 
