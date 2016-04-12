@@ -15,7 +15,7 @@ describe "Dockerfile" do
     expect(os_version).to include("Ubuntu 14")
   end
 
-  ['nodejs', 'npm', 'nodejs-legacy', 'curl'].each do |package|
+  ['nodejs', 'curl', 'build-essential'].each do |package|
     it "should install package #{package}" do 
       expect(package("#{package}")).to be_installed
     end
@@ -30,14 +30,10 @@ describe "Dockerfile" do
     end
     describe file('/app/package.json') do
       it { should exist }
-    end      
-    describe file('/app/package.json') do
       it { should be_file }
     end
     describe file('/app/node_modules') do
       it { should exist }
-    end
-    describe file('/app/node_modules') do
       it { should be_directory }
     end      
   end 		   
@@ -47,7 +43,7 @@ describe "Dockerfile" do
   end
 
   it 'should run with correct version of nodejs' do
-    expect(node_ver).to match("v0.10.25") 
+    expect(node_ver).to include("v4") 
   end
 
   def os_version
