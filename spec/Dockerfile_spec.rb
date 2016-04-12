@@ -28,22 +28,10 @@ describe "Dockerfile" do
     describe command('pwd') do
       its(:stdout) { should match(/app/) }
     end
-    describe file('/app/package.json') do
-      it { should exist }
-      it { should be_file }
-    end
-    describe file('/app/node_modules') do
-      it { should exist }
-      it { should be_directory }
-    end      
   end 		   
 
-  describe user ('jawn') do
-    it { should exist }
-  end
-
   it 'should run with correct version of nodejs' do
-    expect(node_ver).to include("v4") 
+    expect(node_ver).to include("v4.") 
   end
 
   def os_version
