@@ -26,13 +26,11 @@ Use `docker build` to build a docker image based on the Node-Jawn-Docker dockerf
 docker build -t jawn/node-jawn .
 ```
 
-_Note:_ This example creates an image called `node-jawn` in the Dockerhub user `jawn`, but you can choose any name for the image you're building and for the application. `docker build -t user/your-image-name .`
+_Note:_ This example creates an image called `node-jawn` from the user `jawn`, but you can choose any name for the image you're building and for the application. `docker build -t user/your-image-name .`
 
 ### Run the Image
 
 Once the container's image has been built, you can run it. The different commands below to run it will map your application's directories into the container and anything you create or change will be automatically updated into your local computer.
-
-*Note:* these examples assume that you're in the directory where your code lives (ie. your local copy of the jawn code). If you want to explicitly tell docker where to mount the code, replace `$(pwd)` with the path to your code.
 
 ###First install npm:
 
@@ -57,7 +55,7 @@ docker run --rm \
        jawn/node-jawn \
        npm test
 ```
-To work in the nodejs bash, mapping your current directory:
+To work in the nodejs bash, mapping jawn files and directories:
 
 ```
 docker run --rm -it \
