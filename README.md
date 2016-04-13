@@ -68,6 +68,7 @@ docker run --rm -it \
        jawn/node-jawn \
        bash
 ```
+[![asciicast](https://asciinema.org/a/32qm7ro3yw1ss0qvccgv7oafl)
 
 # To test Dockerfile with rspec
 
