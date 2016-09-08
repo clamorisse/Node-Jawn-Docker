@@ -1,3 +1,5 @@
+[![](https://images.microbadger.com/badges/image/clamorisse/node-jawn-docker.svg)](http://microbadger.com/images/clamorisse/node-jawn-docker "Get your own image badge on microbadger.com") [![](https://images.microbadger.com/badges/version/clamorisse/node-jawn-docker.svg)](http://microbadger.com/images/clamorisse/node-jawn-docker "Get your own version badge on microbadger.com")
+
 # Node-Jawn-Docker
 
 A Node.Js docker container with the purpose to be used by contributars to the Jawn project (https://github.com/CfABrigadePhiladelphia/jawn), in order to maintain a reproducible and consistent environment to test and run their code.
